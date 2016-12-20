@@ -62,7 +62,7 @@ Public Class FormKelas
             strSql = "INSERT INTO Kelas VALUES('{0}','{1}','{2}')"
             strSql = String.Format(strSql, kelas, tingkat, keterangan)
         Else
-            strSql = "UPDATE Kelas SET KelasId='{0}', Tingkat='{1}', KetKelas='{2}'"
+            strSql = "UPDATE Kelas SET NamaKelas='{0}', Tingkat='{1}', KetKelas='{2}'"
             strSql = String.Format(strSql, kelas, tingkat, keterangan, Me.kdLama)
         End If
         Me.kelas.executeSQL(strSql)

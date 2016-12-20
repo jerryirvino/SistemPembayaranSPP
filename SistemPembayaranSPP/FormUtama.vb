@@ -22,9 +22,8 @@
     Private Sub BtnBayarDPP_Click(sender As Object, e As EventArgs) Handles BtnBayarDPP.Click
 
     End Sub
-
-    Private Sub FormUtama_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+    
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        FormAdmin.Show()
     End Sub
-
 End Class

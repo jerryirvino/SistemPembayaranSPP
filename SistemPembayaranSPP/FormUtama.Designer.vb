@@ -41,11 +41,15 @@ Partial Class FormUtama
         Me.TabLaporan = New System.Windows.Forms.TabPage()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Laporan = New System.Windows.Forms.Button()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.PbxMenu = New System.Windows.Forms.PictureBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.TabMenu.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.TabLaporan.SuspendLayout()
+        Me.TabPage3.SuspendLayout()
         CType(Me.PbxMenu, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -54,6 +58,7 @@ Partial Class FormUtama
         Me.TabMenu.Controls.Add(Me.TabPage1)
         Me.TabMenu.Controls.Add(Me.TabPage2)
         Me.TabMenu.Controls.Add(Me.TabLaporan)
+        Me.TabMenu.Controls.Add(Me.TabPage3)
         Me.TabMenu.Location = New System.Drawing.Point(1, 1)
         Me.TabMenu.Name = "TabMenu"
         Me.TabMenu.SelectedIndex = 0
@@ -244,6 +249,29 @@ Partial Class FormUtama
         Me.Laporan.TabIndex = 1
         Me.Laporan.UseVisualStyleBackColor = False
         '
+        'TabPage3
+        '
+        Me.TabPage3.Controls.Add(Me.Label8)
+        Me.TabPage3.Controls.Add(Me.Button1)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage3.Size = New System.Drawing.Size(472, 108)
+        Me.TabPage3.TabIndex = 3
+        Me.TabPage3.Text = "Utilitas"
+        Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.White
+        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.Location = New System.Drawing.Point(7, 6)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(80, 80)
+        Me.Button1.TabIndex = 2
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'PbxMenu
         '
         Me.PbxMenu.Image = CType(resources.GetObject("PbxMenu.Image"), System.Drawing.Image)
@@ -252,6 +280,15 @@ Partial Class FormUtama
         Me.PbxMenu.Size = New System.Drawing.Size(480, 301)
         Me.PbxMenu.TabIndex = 1
         Me.PbxMenu.TabStop = False
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(27, 89)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(36, 13)
+        Me.Label8.TabIndex = 3
+        Me.Label8.Text = "Admin"
         '
         'FormUtama
         '
@@ -271,6 +308,8 @@ Partial Class FormUtama
         Me.TabPage2.PerformLayout()
         Me.TabLaporan.ResumeLayout(False)
         Me.TabLaporan.PerformLayout()
+        Me.TabPage3.ResumeLayout(False)
+        Me.TabPage3.PerformLayout()
         CType(Me.PbxMenu, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -295,4 +334,7 @@ Partial Class FormUtama
     Friend WithEvents Laporan As Button
     Friend WithEvents Label7 As Label
     Friend WithEvents PbxMenu As PictureBox
+    Friend WithEvents TabPage3 As TabPage
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Label8 As Label
 End Class
