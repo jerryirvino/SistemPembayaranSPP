@@ -43,7 +43,6 @@ Partial Class FormSiswa
         Me.BtnDel = New System.Windows.Forms.Button()
         Me.BtnEdit = New System.Windows.Forms.Button()
         Me.BtnNew = New System.Windows.Forms.Button()
-        Me.CbxAgama = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TxtKontakWali = New System.Windows.Forms.TextBox()
         Me.TxtNIS = New System.Windows.Forms.TextBox()
@@ -66,11 +65,18 @@ Partial Class FormSiswa
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.BtnClose = New System.Windows.Forms.Button()
+        Me.GbxAgama = New System.Windows.Forms.GroupBox()
+        Me.RBKa = New System.Windows.Forms.RadioButton()
+        Me.RBKr = New System.Windows.Forms.RadioButton()
+        Me.RBI = New System.Windows.Forms.RadioButton()
+        Me.RBH = New System.Windows.Forms.RadioButton()
+        Me.RBB = New System.Windows.Forms.RadioButton()
         CType(Me.PbxSDBW, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvProfilSiswa, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.GbxGender.SuspendLayout()
+        Me.GbxAgama.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label16
@@ -190,11 +196,11 @@ Partial Class FormSiswa
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.GbxAgama)
         Me.GroupBox2.Controls.Add(Me.BtnSave)
         Me.GroupBox2.Controls.Add(Me.BtnDel)
         Me.GroupBox2.Controls.Add(Me.BtnEdit)
         Me.GroupBox2.Controls.Add(Me.BtnNew)
-        Me.GroupBox2.Controls.Add(Me.CbxAgama)
         Me.GroupBox2.Controls.Add(Me.Label1)
         Me.GroupBox2.Controls.Add(Me.TxtKontakWali)
         Me.GroupBox2.Controls.Add(Me.TxtNIS)
@@ -213,7 +219,7 @@ Partial Class FormSiswa
         Me.GroupBox2.Controls.Add(Me.Label5)
         Me.GroupBox2.Location = New System.Drawing.Point(12, 103)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(460, 394)
+        Me.GroupBox2.Size = New System.Drawing.Size(460, 416)
         Me.GroupBox2.TabIndex = 44
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Data Siswa"
@@ -222,7 +228,7 @@ Partial Class FormSiswa
         '
         Me.BtnSave.BackgroundImage = CType(resources.GetObject("BtnSave.BackgroundImage"), System.Drawing.Image)
         Me.BtnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnSave.Location = New System.Drawing.Point(67, 334)
+        Me.BtnSave.Location = New System.Drawing.Point(67, 360)
         Me.BtnSave.Name = "BtnSave"
         Me.BtnSave.Size = New System.Drawing.Size(50, 50)
         Me.BtnSave.TabIndex = 72
@@ -232,7 +238,7 @@ Partial Class FormSiswa
         '
         Me.BtnDel.BackgroundImage = CType(resources.GetObject("BtnDel.BackgroundImage"), System.Drawing.Image)
         Me.BtnDel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnDel.Location = New System.Drawing.Point(179, 334)
+        Me.BtnDel.Location = New System.Drawing.Point(179, 360)
         Me.BtnDel.Name = "BtnDel"
         Me.BtnDel.Size = New System.Drawing.Size(50, 50)
         Me.BtnDel.TabIndex = 69
@@ -242,7 +248,7 @@ Partial Class FormSiswa
         '
         Me.BtnEdit.BackgroundImage = CType(resources.GetObject("BtnEdit.BackgroundImage"), System.Drawing.Image)
         Me.BtnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnEdit.Location = New System.Drawing.Point(123, 334)
+        Me.BtnEdit.Location = New System.Drawing.Point(123, 360)
         Me.BtnEdit.Name = "BtnEdit"
         Me.BtnEdit.Size = New System.Drawing.Size(50, 50)
         Me.BtnEdit.TabIndex = 70
@@ -252,20 +258,11 @@ Partial Class FormSiswa
         '
         Me.BtnNew.BackgroundImage = CType(resources.GetObject("BtnNew.BackgroundImage"), System.Drawing.Image)
         Me.BtnNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnNew.Location = New System.Drawing.Point(11, 334)
+        Me.BtnNew.Location = New System.Drawing.Point(11, 360)
         Me.BtnNew.Name = "BtnNew"
         Me.BtnNew.Size = New System.Drawing.Size(50, 50)
         Me.BtnNew.TabIndex = 71
         Me.BtnNew.UseVisualStyleBackColor = True
-        '
-        'CbxAgama
-        '
-        Me.CbxAgama.FormattingEnabled = True
-        Me.CbxAgama.Items.AddRange(New Object() {"Kristen", "Katolik", "Islam", "Hindu", "Budha", "Kong Hu Chu"})
-        Me.CbxAgama.Location = New System.Drawing.Point(138, 146)
-        Me.CbxAgama.Name = "CbxAgama"
-        Me.CbxAgama.Size = New System.Drawing.Size(121, 21)
-        Me.CbxAgama.TabIndex = 30
         '
         'Label1
         '
@@ -278,7 +275,7 @@ Partial Class FormSiswa
         '
         'TxtKontakWali
         '
-        Me.TxtKontakWali.Location = New System.Drawing.Point(138, 300)
+        Me.TxtKontakWali.Location = New System.Drawing.Point(138, 326)
         Me.TxtKontakWali.Name = "TxtKontakWali"
         Me.TxtKontakWali.Size = New System.Drawing.Size(134, 20)
         Me.TxtKontakWali.TabIndex = 24
@@ -293,7 +290,7 @@ Partial Class FormSiswa
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(8, 303)
+        Me.Label11.Location = New System.Drawing.Point(8, 329)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(65, 13)
         Me.Label11.TabIndex = 23
@@ -316,7 +313,7 @@ Partial Class FormSiswa
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(8, 277)
+        Me.Label9.Location = New System.Drawing.Point(8, 303)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(59, 13)
         Me.Label9.TabIndex = 21
@@ -363,7 +360,7 @@ Partial Class FormSiswa
         '
         'TxtNamaWali
         '
-        Me.TxtNamaWali.Location = New System.Drawing.Point(138, 274)
+        Me.TxtNamaWali.Location = New System.Drawing.Point(138, 300)
         Me.TxtNamaWali.Name = "TxtNamaWali"
         Me.TxtNamaWali.Size = New System.Drawing.Size(306, 20)
         Me.TxtNamaWali.TabIndex = 19
@@ -379,7 +376,7 @@ Partial Class FormSiswa
         '
         'RtbAlamat
         '
-        Me.RtbAlamat.Location = New System.Drawing.Point(138, 172)
+        Me.RtbAlamat.Location = New System.Drawing.Point(138, 198)
         Me.RtbAlamat.Name = "RtbAlamat"
         Me.RtbAlamat.Size = New System.Drawing.Size(306, 96)
         Me.RtbAlamat.TabIndex = 17
@@ -397,7 +394,7 @@ Partial Class FormSiswa
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(8, 149)
+        Me.Label8.Location = New System.Drawing.Point(8, 169)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(40, 13)
         Me.Label8.TabIndex = 16
@@ -415,7 +412,7 @@ Partial Class FormSiswa
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(8, 175)
+        Me.Label5.Location = New System.Drawing.Point(8, 201)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(39, 13)
         Me.Label5.TabIndex = 12
@@ -457,12 +454,80 @@ Partial Class FormSiswa
         Me.BtnClose.TabIndex = 65
         Me.BtnClose.UseVisualStyleBackColor = True
         '
+        'GbxAgama
+        '
+        Me.GbxAgama.Controls.Add(Me.RBB)
+        Me.GbxAgama.Controls.Add(Me.RBH)
+        Me.GbxAgama.Controls.Add(Me.RBI)
+        Me.GbxAgama.Controls.Add(Me.RBKa)
+        Me.GbxAgama.Controls.Add(Me.RBKr)
+        Me.GbxAgama.Location = New System.Drawing.Point(138, 146)
+        Me.GbxAgama.Name = "GbxAgama"
+        Me.GbxAgama.Size = New System.Drawing.Size(306, 43)
+        Me.GbxAgama.TabIndex = 73
+        Me.GbxAgama.TabStop = False
+        '
+        'RBKa
+        '
+        Me.RBKa.AutoSize = True
+        Me.RBKa.Location = New System.Drawing.Point(69, 19)
+        Me.RBKa.Name = "RBKa"
+        Me.RBKa.Size = New System.Drawing.Size(57, 17)
+        Me.RBKa.TabIndex = 1
+        Me.RBKa.TabStop = True
+        Me.RBKa.Text = "Katolik"
+        Me.RBKa.UseVisualStyleBackColor = True
+        '
+        'RBKr
+        '
+        Me.RBKr.AutoSize = True
+        Me.RBKr.Location = New System.Drawing.Point(6, 19)
+        Me.RBKr.Name = "RBKr"
+        Me.RBKr.Size = New System.Drawing.Size(57, 17)
+        Me.RBKr.TabIndex = 0
+        Me.RBKr.TabStop = True
+        Me.RBKr.Text = "Kristen"
+        Me.RBKr.UseVisualStyleBackColor = True
+        '
+        'RBI
+        '
+        Me.RBI.AutoSize = True
+        Me.RBI.Location = New System.Drawing.Point(132, 19)
+        Me.RBI.Name = "RBI"
+        Me.RBI.Size = New System.Drawing.Size(49, 17)
+        Me.RBI.TabIndex = 2
+        Me.RBI.TabStop = True
+        Me.RBI.Text = "Islam"
+        Me.RBI.UseVisualStyleBackColor = True
+        '
+        'RBH
+        '
+        Me.RBH.AutoSize = True
+        Me.RBH.Location = New System.Drawing.Point(187, 19)
+        Me.RBH.Name = "RBH"
+        Me.RBH.Size = New System.Drawing.Size(53, 17)
+        Me.RBH.TabIndex = 3
+        Me.RBH.TabStop = True
+        Me.RBH.Text = "Hindu"
+        Me.RBH.UseVisualStyleBackColor = True
+        '
+        'RBB
+        '
+        Me.RBB.AutoSize = True
+        Me.RBB.Location = New System.Drawing.Point(246, 19)
+        Me.RBB.Name = "RBB"
+        Me.RBB.Size = New System.Drawing.Size(56, 17)
+        Me.RBB.TabIndex = 4
+        Me.RBB.TabStop = True
+        Me.RBB.Text = "Budha"
+        Me.RBB.UseVisualStyleBackColor = True
+        '
         'FormSiswa
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(971, 507)
+        Me.ClientSize = New System.Drawing.Size(971, 526)
         Me.Controls.Add(Me.BtnClose)
         Me.Controls.Add(Me.CbxTampilThnAjaran)
         Me.Controls.Add(Me.DgvProfilSiswa)
@@ -484,6 +549,8 @@ Partial Class FormSiswa
         Me.GroupBox2.PerformLayout()
         Me.GbxGender.ResumeLayout(False)
         Me.GbxGender.PerformLayout()
+        Me.GbxAgama.ResumeLayout(False)
+        Me.GbxAgama.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -505,7 +572,6 @@ Partial Class FormSiswa
     Friend WithEvents NamaWali As DataGridViewTextBoxColumn
     Friend WithEvents Telp As DataGridViewTextBoxColumn
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents CbxAgama As ComboBox
     Friend WithEvents Label1 As Label
     Friend WithEvents TxtKontakWali As TextBox
     Friend WithEvents TxtNIS As TextBox
@@ -532,4 +598,10 @@ Partial Class FormSiswa
     Friend WithEvents BtnEdit As Button
     Friend WithEvents BtnNew As Button
     Friend WithEvents BtnClose As Button
+    Friend WithEvents GbxAgama As GroupBox
+    Friend WithEvents RBB As RadioButton
+    Friend WithEvents RBH As RadioButton
+    Friend WithEvents RBI As RadioButton
+    Friend WithEvents RBKa As RadioButton
+    Friend WithEvents RBKr As RadioButton
 End Class

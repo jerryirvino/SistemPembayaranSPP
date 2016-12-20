@@ -156,9 +156,9 @@ Partial Class FormTahunAjaran
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(6, 64)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(39, 13)
+        Me.Label2.Size = New System.Drawing.Size(51, 13)
         Me.Label2.TabIndex = 4
-        Me.Label2.Text = "Label2"
+        Me.Label2.Text = "Semester"
         '
         'Label1
         '

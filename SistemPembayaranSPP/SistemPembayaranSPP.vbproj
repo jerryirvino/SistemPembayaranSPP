@@ -124,6 +124,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Tabel.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FormJenisBayar.resx">
