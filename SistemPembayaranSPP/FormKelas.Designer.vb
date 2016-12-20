@@ -23,8 +23,6 @@ Partial Class FormKelas
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormKelas))
-        Me.BtnBatal = New System.Windows.Forms.Button()
-        Me.BtnSimpan = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TxtKeterangan = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -49,6 +47,8 @@ Partial Class FormKelas
         Me.BtnEdit = New System.Windows.Forms.Button()
         Me.BtnNew = New System.Windows.Forms.Button()
         Me.BtnSave = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.TxtIdKelas = New System.Windows.Forms.TextBox()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DgvDataKelas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -56,28 +56,10 @@ Partial Class FormKelas
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'BtnBatal
-        '
-        Me.BtnBatal.Location = New System.Drawing.Point(176, 110)
-        Me.BtnBatal.Name = "BtnBatal"
-        Me.BtnBatal.Size = New System.Drawing.Size(75, 23)
-        Me.BtnBatal.TabIndex = 7
-        Me.BtnBatal.Text = "Batal"
-        Me.BtnBatal.UseVisualStyleBackColor = True
-        '
-        'BtnSimpan
-        '
-        Me.BtnSimpan.Location = New System.Drawing.Point(95, 110)
-        Me.BtnSimpan.Name = "BtnSimpan"
-        Me.BtnSimpan.Size = New System.Drawing.Size(75, 23)
-        Me.BtnSimpan.TabIndex = 6
-        Me.BtnSimpan.Text = "Simpan"
-        Me.BtnSimpan.UseVisualStyleBackColor = True
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(6, 75)
+        Me.Label4.Location = New System.Drawing.Point(8, 102)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(62, 13)
         Me.Label4.TabIndex = 5
@@ -85,7 +67,7 @@ Partial Class FormKelas
         '
         'TxtKeterangan
         '
-        Me.TxtKeterangan.Location = New System.Drawing.Point(81, 72)
+        Me.TxtKeterangan.Location = New System.Drawing.Point(83, 99)
         Me.TxtKeterangan.Name = "TxtKeterangan"
         Me.TxtKeterangan.Size = New System.Drawing.Size(191, 20)
         Me.TxtKeterangan.TabIndex = 4
@@ -93,7 +75,7 @@ Partial Class FormKelas
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(6, 49)
+        Me.Label3.Location = New System.Drawing.Point(8, 76)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(33, 13)
         Me.Label3.TabIndex = 3
@@ -101,7 +83,7 @@ Partial Class FormKelas
         '
         'TxtKelas
         '
-        Me.TxtKelas.Location = New System.Drawing.Point(81, 46)
+        Me.TxtKelas.Location = New System.Drawing.Point(83, 73)
         Me.TxtKelas.Name = "TxtKelas"
         Me.TxtKelas.Size = New System.Drawing.Size(191, 20)
         Me.TxtKelas.TabIndex = 2
@@ -109,7 +91,7 @@ Partial Class FormKelas
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(6, 22)
+        Me.Label2.Location = New System.Drawing.Point(8, 49)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(43, 13)
         Me.Label2.TabIndex = 1
@@ -117,24 +99,28 @@ Partial Class FormKelas
         '
         'TxtTingkat
         '
-        Me.TxtTingkat.Location = New System.Drawing.Point(81, 19)
+        Me.TxtTingkat.Location = New System.Drawing.Point(83, 46)
         Me.TxtTingkat.Name = "TxtTingkat"
         Me.TxtTingkat.Size = New System.Drawing.Size(191, 20)
         Me.TxtTingkat.TabIndex = 0
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.BtnBatal)
-        Me.GroupBox2.Controls.Add(Me.BtnSimpan)
+        Me.GroupBox2.Controls.Add(Me.BtnSave)
+        Me.GroupBox2.Controls.Add(Me.Label5)
+        Me.GroupBox2.Controls.Add(Me.TxtIdKelas)
+        Me.GroupBox2.Controls.Add(Me.BtnDel)
         Me.GroupBox2.Controls.Add(Me.Label4)
+        Me.GroupBox2.Controls.Add(Me.BtnEdit)
         Me.GroupBox2.Controls.Add(Me.TxtKeterangan)
+        Me.GroupBox2.Controls.Add(Me.BtnNew)
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Controls.Add(Me.TxtKelas)
         Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Controls.Add(Me.TxtTingkat)
         Me.GroupBox2.Location = New System.Drawing.Point(323, 101)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(280, 145)
+        Me.GroupBox2.Size = New System.Drawing.Size(280, 234)
         Me.GroupBox2.TabIndex = 58
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Input Data Kelas"
@@ -256,7 +242,7 @@ Partial Class FormKelas
         '
         Me.BtnDel.BackgroundImage = CType(resources.GetObject("BtnDel.BackgroundImage"), System.Drawing.Image)
         Me.BtnDel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnDel.Location = New System.Drawing.Point(180, 341)
+        Me.BtnDel.Location = New System.Drawing.Point(200, 178)
         Me.BtnDel.Name = "BtnDel"
         Me.BtnDel.Size = New System.Drawing.Size(50, 50)
         Me.BtnDel.TabIndex = 65
@@ -267,7 +253,7 @@ Partial Class FormKelas
         Me.BtnEdit.BackColor = System.Drawing.Color.White
         Me.BtnEdit.BackgroundImage = CType(resources.GetObject("BtnEdit.BackgroundImage"), System.Drawing.Image)
         Me.BtnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnEdit.Location = New System.Drawing.Point(124, 341)
+        Me.BtnEdit.Location = New System.Drawing.Point(144, 178)
         Me.BtnEdit.Name = "BtnEdit"
         Me.BtnEdit.Size = New System.Drawing.Size(50, 50)
         Me.BtnEdit.TabIndex = 66
@@ -278,7 +264,7 @@ Partial Class FormKelas
         Me.BtnNew.BackColor = System.Drawing.Color.White
         Me.BtnNew.BackgroundImage = CType(resources.GetObject("BtnNew.BackgroundImage"), System.Drawing.Image)
         Me.BtnNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnNew.Location = New System.Drawing.Point(12, 341)
+        Me.BtnNew.Location = New System.Drawing.Point(32, 178)
         Me.BtnNew.Name = "BtnNew"
         Me.BtnNew.Size = New System.Drawing.Size(50, 50)
         Me.BtnNew.TabIndex = 67
@@ -288,11 +274,28 @@ Partial Class FormKelas
         '
         Me.BtnSave.BackgroundImage = CType(resources.GetObject("BtnSave.BackgroundImage"), System.Drawing.Image)
         Me.BtnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnSave.Location = New System.Drawing.Point(68, 341)
+        Me.BtnSave.Location = New System.Drawing.Point(88, 178)
         Me.BtnSave.Name = "BtnSave"
         Me.BtnSave.Size = New System.Drawing.Size(50, 50)
         Me.BtnSave.TabIndex = 68
         Me.BtnSave.UseVisualStyleBackColor = True
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(8, 23)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(47, 13)
+        Me.Label5.TabIndex = 9
+        Me.Label5.Text = "ID Kelas"
+        '
+        'TxtIdKelas
+        '
+        Me.TxtIdKelas.Enabled = False
+        Me.TxtIdKelas.Location = New System.Drawing.Point(83, 20)
+        Me.TxtIdKelas.Name = "TxtIdKelas"
+        Me.TxtIdKelas.Size = New System.Drawing.Size(63, 20)
+        Me.TxtIdKelas.TabIndex = 8
         '
         'FormKelas
         '
@@ -300,11 +303,7 @@ Partial Class FormKelas
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(615, 396)
-        Me.Controls.Add(Me.BtnSave)
         Me.Controls.Add(Me.BtnClose)
-        Me.Controls.Add(Me.BtnDel)
-        Me.Controls.Add(Me.BtnEdit)
-        Me.Controls.Add(Me.BtnNew)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label16)
@@ -325,8 +324,6 @@ Partial Class FormKelas
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents BtnBatal As Button
-    Friend WithEvents BtnSimpan As Button
     Friend WithEvents Label4 As Label
     Friend WithEvents TxtKeterangan As TextBox
     Friend WithEvents Label3 As Label
@@ -351,4 +348,6 @@ Partial Class FormKelas
     Friend WithEvents BtnEdit As Button
     Friend WithEvents BtnNew As Button
     Friend WithEvents BtnSave As Button
+    Friend WithEvents Label5 As Label
+    Friend WithEvents TxtIdKelas As TextBox
 End Class
