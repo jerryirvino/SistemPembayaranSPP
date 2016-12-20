@@ -30,15 +30,13 @@ Partial Class FormTahunAjaran
         Me.TxtThnAjaran = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.TglAkhir = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TglMulai = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Semester = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.DgvThnAjaran = New System.Windows.Forms.DataGridView()
-        Me.ThnAjaran = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GbxThnAjaran = New System.Windows.Forms.GroupBox()
+        Me.TxtIdThnAjaran = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.BtnSave = New System.Windows.Forms.Button()
         Me.BtnDel = New System.Windows.Forms.Button()
         Me.BtnEdit = New System.Windows.Forms.Button()
@@ -46,6 +44,11 @@ Partial Class FormTahunAjaran
         Me.BtnClose = New System.Windows.Forms.Button()
         Me.PbxLogo = New System.Windows.Forms.PictureBox()
         Me.PbxSDBW = New System.Windows.Forms.PictureBox()
+        Me.ThnAjaranId = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ThnAjaran = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Semester = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TglMulai = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TglAkhir = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DgvThnAjaran, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GbxThnAjaran.SuspendLayout()
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -54,14 +57,14 @@ Partial Class FormTahunAjaran
         '
         'DtpAkhir
         '
-        Me.DtpAkhir.Location = New System.Drawing.Point(106, 115)
+        Me.DtpAkhir.Location = New System.Drawing.Point(109, 136)
         Me.DtpAkhir.Name = "DtpAkhir"
         Me.DtpAkhir.Size = New System.Drawing.Size(200, 20)
         Me.DtpAkhir.TabIndex = 15
         '
         'DtpMulai
         '
-        Me.DtpMulai.Location = New System.Drawing.Point(106, 88)
+        Me.DtpMulai.Location = New System.Drawing.Point(109, 109)
         Me.DtpMulai.Name = "DtpMulai"
         Me.DtpMulai.Size = New System.Drawing.Size(200, 20)
         Me.DtpMulai.TabIndex = 14
@@ -70,7 +73,7 @@ Partial Class FormTahunAjaran
         '
         Me.CbxSemester.FormattingEnabled = True
         Me.CbxSemester.Items.AddRange(New Object() {"GANJIL", "GENAP"})
-        Me.CbxSemester.Location = New System.Drawing.Point(106, 61)
+        Me.CbxSemester.Location = New System.Drawing.Point(109, 82)
         Me.CbxSemester.Name = "CbxSemester"
         Me.CbxSemester.Size = New System.Drawing.Size(150, 21)
         Me.CbxSemester.TabIndex = 13
@@ -78,7 +81,7 @@ Partial Class FormTahunAjaran
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(7, 117)
+        Me.Label4.Location = New System.Drawing.Point(10, 138)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(31, 13)
         Me.Label4.TabIndex = 12
@@ -86,7 +89,7 @@ Partial Class FormTahunAjaran
         '
         'TxtThnAjaran
         '
-        Me.TxtThnAjaran.Location = New System.Drawing.Point(106, 29)
+        Me.TxtThnAjaran.Location = New System.Drawing.Point(109, 50)
         Me.TxtThnAjaran.Name = "TxtThnAjaran"
         Me.TxtThnAjaran.Size = New System.Drawing.Size(150, 20)
         Me.TxtThnAjaran.TabIndex = 10
@@ -109,28 +112,10 @@ Partial Class FormTahunAjaran
         Me.Label15.TabIndex = 48
         Me.Label15.Text = "Jl. Kranggan no 11, Yogyakarta 55233"
         '
-        'TglAkhir
-        '
-        Me.TglAkhir.DataPropertyName = "TglAkhir"
-        Me.TglAkhir.HeaderText = "Tanggal Akhir"
-        Me.TglAkhir.Name = "TglAkhir"
-        '
-        'TglMulai
-        '
-        Me.TglMulai.DataPropertyName = "TglMulai"
-        Me.TglMulai.HeaderText = "Tanggal Mulai"
-        Me.TglMulai.Name = "TglMulai"
-        '
-        'Semester
-        '
-        Me.Semester.DataPropertyName = "Semester"
-        Me.Semester.HeaderText = "Semester"
-        Me.Semester.Name = "Semester"
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(6, 90)
+        Me.Label3.Location = New System.Drawing.Point(9, 111)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(32, 13)
         Me.Label3.TabIndex = 5
@@ -139,22 +124,16 @@ Partial Class FormTahunAjaran
         'DgvThnAjaran
         '
         Me.DgvThnAjaran.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvThnAjaran.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ThnAjaran, Me.Semester, Me.TglMulai, Me.TglAkhir})
-        Me.DgvThnAjaran.Location = New System.Drawing.Point(13, 309)
+        Me.DgvThnAjaran.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ThnAjaranId, Me.ThnAjaran, Me.Semester, Me.TglMulai, Me.TglAkhir})
+        Me.DgvThnAjaran.Location = New System.Drawing.Point(12, 328)
         Me.DgvThnAjaran.Name = "DgvThnAjaran"
         Me.DgvThnAjaran.Size = New System.Drawing.Size(388, 180)
         Me.DgvThnAjaran.TabIndex = 45
         '
-        'ThnAjaran
-        '
-        Me.ThnAjaran.DataPropertyName = "ThnAjaran"
-        Me.ThnAjaran.HeaderText = "Tahun Ajaran"
-        Me.ThnAjaran.Name = "ThnAjaran"
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(6, 64)
+        Me.Label2.Location = New System.Drawing.Point(9, 85)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(51, 13)
         Me.Label2.TabIndex = 4
@@ -163,7 +142,7 @@ Partial Class FormTahunAjaran
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 37)
+        Me.Label1.Location = New System.Drawing.Point(9, 58)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(71, 13)
         Me.Label1.TabIndex = 3
@@ -171,6 +150,8 @@ Partial Class FormTahunAjaran
         '
         'GbxThnAjaran
         '
+        Me.GbxThnAjaran.Controls.Add(Me.TxtIdThnAjaran)
+        Me.GbxThnAjaran.Controls.Add(Me.Label5)
         Me.GbxThnAjaran.Controls.Add(Me.BtnSave)
         Me.GbxThnAjaran.Controls.Add(Me.BtnDel)
         Me.GbxThnAjaran.Controls.Add(Me.BtnEdit)
@@ -186,16 +167,33 @@ Partial Class FormTahunAjaran
         Me.GbxThnAjaran.Controls.Add(Me.Label1)
         Me.GbxThnAjaran.Location = New System.Drawing.Point(12, 104)
         Me.GbxThnAjaran.Name = "GbxThnAjaran"
-        Me.GbxThnAjaran.Size = New System.Drawing.Size(389, 199)
+        Me.GbxThnAjaran.Size = New System.Drawing.Size(389, 218)
         Me.GbxThnAjaran.TabIndex = 44
         Me.GbxThnAjaran.TabStop = False
         Me.GbxThnAjaran.Text = "Data Tahun Ajaran"
+        '
+        'TxtIdThnAjaran
+        '
+        Me.TxtIdThnAjaran.Enabled = False
+        Me.TxtIdThnAjaran.Location = New System.Drawing.Point(109, 24)
+        Me.TxtIdThnAjaran.Name = "TxtIdThnAjaran"
+        Me.TxtIdThnAjaran.Size = New System.Drawing.Size(56, 20)
+        Me.TxtIdThnAjaran.TabIndex = 78
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(9, 32)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(83, 13)
+        Me.Label5.TabIndex = 77
+        Me.Label5.Text = "Id Tahun Ajaran"
         '
         'BtnSave
         '
         Me.BtnSave.BackgroundImage = CType(resources.GetObject("BtnSave.BackgroundImage"), System.Drawing.Image)
         Me.BtnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnSave.Location = New System.Drawing.Point(153, 143)
+        Me.BtnSave.Location = New System.Drawing.Point(156, 164)
         Me.BtnSave.Name = "BtnSave"
         Me.BtnSave.Size = New System.Drawing.Size(50, 50)
         Me.BtnSave.TabIndex = 76
@@ -205,7 +203,7 @@ Partial Class FormTahunAjaran
         '
         Me.BtnDel.BackgroundImage = CType(resources.GetObject("BtnDel.BackgroundImage"), System.Drawing.Image)
         Me.BtnDel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnDel.Location = New System.Drawing.Point(265, 143)
+        Me.BtnDel.Location = New System.Drawing.Point(268, 164)
         Me.BtnDel.Name = "BtnDel"
         Me.BtnDel.Size = New System.Drawing.Size(50, 50)
         Me.BtnDel.TabIndex = 73
@@ -215,7 +213,7 @@ Partial Class FormTahunAjaran
         '
         Me.BtnEdit.BackgroundImage = CType(resources.GetObject("BtnEdit.BackgroundImage"), System.Drawing.Image)
         Me.BtnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnEdit.Location = New System.Drawing.Point(209, 143)
+        Me.BtnEdit.Location = New System.Drawing.Point(212, 164)
         Me.BtnEdit.Name = "BtnEdit"
         Me.BtnEdit.Size = New System.Drawing.Size(50, 50)
         Me.BtnEdit.TabIndex = 74
@@ -225,7 +223,7 @@ Partial Class FormTahunAjaran
         '
         Me.BtnNew.BackgroundImage = CType(resources.GetObject("BtnNew.BackgroundImage"), System.Drawing.Image)
         Me.BtnNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnNew.Location = New System.Drawing.Point(97, 143)
+        Me.BtnNew.Location = New System.Drawing.Point(100, 164)
         Me.BtnNew.Name = "BtnNew"
         Me.BtnNew.Size = New System.Drawing.Size(50, 50)
         Me.BtnNew.TabIndex = 75
@@ -235,7 +233,7 @@ Partial Class FormTahunAjaran
         '
         Me.BtnClose.BackgroundImage = CType(resources.GetObject("BtnClose.BackgroundImage"), System.Drawing.Image)
         Me.BtnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnClose.Location = New System.Drawing.Point(333, 143)
+        Me.BtnClose.Location = New System.Drawing.Point(333, 164)
         Me.BtnClose.Name = "BtnClose"
         Me.BtnClose.Size = New System.Drawing.Size(50, 50)
         Me.BtnClose.TabIndex = 66
@@ -260,12 +258,44 @@ Partial Class FormTahunAjaran
         Me.PbxSDBW.TabIndex = 47
         Me.PbxSDBW.TabStop = False
         '
+        'ThnAjaranId
+        '
+        Me.ThnAjaranId.DataPropertyName = "ThnAjaranId"
+        Me.ThnAjaranId.HeaderText = "ID"
+        Me.ThnAjaranId.Name = "ThnAjaranId"
+        Me.ThnAjaranId.Width = 20
+        '
+        'ThnAjaran
+        '
+        Me.ThnAjaran.DataPropertyName = "ThnAjaran"
+        Me.ThnAjaran.HeaderText = "Tahun Ajaran"
+        Me.ThnAjaran.Name = "ThnAjaran"
+        Me.ThnAjaran.Width = 60
+        '
+        'Semester
+        '
+        Me.Semester.DataPropertyName = "Semester"
+        Me.Semester.HeaderText = "Semester"
+        Me.Semester.Name = "Semester"
+        '
+        'TglMulai
+        '
+        Me.TglMulai.DataPropertyName = "TglMulai"
+        Me.TglMulai.HeaderText = "Tanggal Mulai"
+        Me.TglMulai.Name = "TglMulai"
+        '
+        'TglAkhir
+        '
+        Me.TglAkhir.DataPropertyName = "TglAkhir"
+        Me.TglAkhir.HeaderText = "Tanggal Akhir"
+        Me.TglAkhir.Name = "TglAkhir"
+        '
         'FormTahunAjaran
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(416, 499)
+        Me.ClientSize = New System.Drawing.Size(416, 520)
         Me.Controls.Add(Me.PbxLogo)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Label15)
@@ -293,12 +323,8 @@ Partial Class FormTahunAjaran
     Friend WithEvents TxtThnAjaran As TextBox
     Friend WithEvents Label16 As Label
     Friend WithEvents Label15 As Label
-    Friend WithEvents TglAkhir As DataGridViewTextBoxColumn
-    Friend WithEvents TglMulai As DataGridViewTextBoxColumn
-    Friend WithEvents Semester As DataGridViewTextBoxColumn
     Friend WithEvents Label3 As Label
     Friend WithEvents DgvThnAjaran As DataGridView
-    Friend WithEvents ThnAjaran As DataGridViewTextBoxColumn
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents PbxSDBW As PictureBox
@@ -308,4 +334,11 @@ Partial Class FormTahunAjaran
     Friend WithEvents BtnDel As Button
     Friend WithEvents BtnEdit As Button
     Friend WithEvents BtnNew As Button
+    Friend WithEvents TxtIdThnAjaran As TextBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents ThnAjaranId As DataGridViewTextBoxColumn
+    Friend WithEvents ThnAjaran As DataGridViewTextBoxColumn
+    Friend WithEvents Semester As DataGridViewTextBoxColumn
+    Friend WithEvents TglMulai As DataGridViewTextBoxColumn
+    Friend WithEvents TglAkhir As DataGridViewTextBoxColumn
 End Class

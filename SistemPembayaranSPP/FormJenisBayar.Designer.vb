@@ -28,24 +28,26 @@ Partial Class FormJenisBayar
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.DgvJenisBayar = New System.Windows.Forms.DataGridView()
+        Me.TxtFilter = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.RtbKet = New System.Windows.Forms.RichTextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.CbxJenisBayar = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TxtNamaBayar = New System.Windows.Forms.TextBox()
         Me.BtnSave = New System.Windows.Forms.Button()
         Me.BtnDel = New System.Windows.Forms.Button()
         Me.BtnEdit = New System.Windows.Forms.Button()
         Me.BtnNew = New System.Windows.Forms.Button()
         Me.BtnClose = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.TxtIdJenBayar = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DgvJenisBayar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -88,72 +90,75 @@ Partial Class FormJenisBayar
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.DataGridView1)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.DgvJenisBayar)
+        Me.GroupBox1.Controls.Add(Me.TxtFilter)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 103)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(289, 204)
         Me.GroupBox1.TabIndex = 61
         Me.GroupBox1.TabStop = False
         '
-        'DataGridView1
+        'DgvJenisBayar
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(6, 45)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(274, 150)
-        Me.DataGridView1.TabIndex = 1
+        Me.DgvJenisBayar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvJenisBayar.Location = New System.Drawing.Point(6, 45)
+        Me.DgvJenisBayar.Name = "DgvJenisBayar"
+        Me.DgvJenisBayar.Size = New System.Drawing.Size(274, 150)
+        Me.DgvJenisBayar.TabIndex = 1
         '
-        'TextBox1
+        'TxtFilter
         '
-        Me.TextBox1.Location = New System.Drawing.Point(6, 19)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(274, 20)
-        Me.TextBox1.TabIndex = 0
+        Me.TxtFilter.Location = New System.Drawing.Point(6, 19)
+        Me.TxtFilter.Name = "TxtFilter"
+        Me.TxtFilter.Size = New System.Drawing.Size(274, 20)
+        Me.TxtFilter.TabIndex = 0
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.RichTextBox1)
+        Me.GroupBox2.Controls.Add(Me.Label4)
+        Me.GroupBox2.Controls.Add(Me.TxtIdJenBayar)
+        Me.GroupBox2.Controls.Add(Me.RtbKet)
         Me.GroupBox2.Controls.Add(Me.Label3)
-        Me.GroupBox2.Controls.Add(Me.ComboBox1)
+        Me.GroupBox2.Controls.Add(Me.CbxJenisBayar)
         Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Controls.Add(Me.Label1)
-        Me.GroupBox2.Controls.Add(Me.TextBox2)
+        Me.GroupBox2.Controls.Add(Me.TxtNamaBayar)
         Me.GroupBox2.Location = New System.Drawing.Point(307, 103)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(251, 204)
         Me.GroupBox2.TabIndex = 62
         Me.GroupBox2.TabStop = False
         '
-        'RichTextBox1
+        'RtbKet
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(109, 72)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(132, 123)
-        Me.RichTextBox1.TabIndex = 4
-        Me.RichTextBox1.Text = ""
+        Me.RtbKet.Location = New System.Drawing.Point(113, 99)
+        Me.RtbKet.Name = "RtbKet"
+        Me.RtbKet.Size = New System.Drawing.Size(132, 99)
+        Me.RtbKet.TabIndex = 4
+        Me.RtbKet.Text = ""
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(6, 77)
+        Me.Label3.Location = New System.Drawing.Point(10, 104)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(62, 13)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Keterangan"
         '
-        'ComboBox1
+        'CbxJenisBayar
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(109, 45)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(132, 21)
-        Me.ComboBox1.TabIndex = 2
+        Me.CbxJenisBayar.FormattingEnabled = True
+        Me.CbxJenisBayar.Items.AddRange(New Object() {"BULANAN", "SEMESTER"})
+        Me.CbxJenisBayar.Location = New System.Drawing.Point(113, 72)
+        Me.CbxJenisBayar.Name = "CbxJenisBayar"
+        Me.CbxJenisBayar.Size = New System.Drawing.Size(132, 21)
+        Me.CbxJenisBayar.TabIndex = 2
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(6, 48)
+        Me.Label2.Location = New System.Drawing.Point(10, 75)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(93, 13)
         Me.Label2.TabIndex = 1
@@ -162,18 +167,18 @@ Partial Class FormJenisBayar
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 22)
+        Me.Label1.Location = New System.Drawing.Point(10, 49)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(97, 13)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Nama Pembayaran"
         '
-        'TextBox2
+        'TxtNamaBayar
         '
-        Me.TextBox2.Location = New System.Drawing.Point(109, 19)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(132, 20)
-        Me.TextBox2.TabIndex = 0
+        Me.TxtNamaBayar.Location = New System.Drawing.Point(113, 46)
+        Me.TxtNamaBayar.Name = "TxtNamaBayar"
+        Me.TxtNamaBayar.Size = New System.Drawing.Size(132, 20)
+        Me.TxtNamaBayar.TabIndex = 0
         '
         'BtnSave
         '
@@ -225,6 +230,22 @@ Partial Class FormJenisBayar
         Me.BtnClose.TabIndex = 77
         Me.BtnClose.UseVisualStyleBackColor = True
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(10, 22)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(73, 13)
+        Me.Label4.TabIndex = 6
+        Me.Label4.Text = "Id Jenis Bayar"
+        '
+        'TxtIdJenBayar
+        '
+        Me.TxtIdJenBayar.Location = New System.Drawing.Point(113, 20)
+        Me.TxtIdJenBayar.Name = "TxtIdJenBayar"
+        Me.TxtIdJenBayar.Size = New System.Drawing.Size(63, 20)
+        Me.TxtIdJenBayar.TabIndex = 5
+        '
         'FormJenisBayar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -249,7 +270,7 @@ Partial Class FormJenisBayar
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DgvJenisBayar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
@@ -262,18 +283,20 @@ Partial Class FormJenisBayar
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents DgvJenisBayar As DataGridView
+    Friend WithEvents TxtFilter As TextBox
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents RtbKet As RichTextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents CbxJenisBayar As ComboBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TxtNamaBayar As TextBox
     Friend WithEvents BtnSave As Button
     Friend WithEvents BtnDel As Button
     Friend WithEvents BtnEdit As Button
     Friend WithEvents BtnNew As Button
     Friend WithEvents BtnClose As Button
+    Friend WithEvents Label4 As Label
+    Friend WithEvents TxtIdJenBayar As TextBox
 End Class
